@@ -1,0 +1,111 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle":"custom",
+				"disableScroll":true
+			}
+		},
+		{
+			"path": "pages/shoppCart/shoppCart",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/shopping/shopping",
+			"style": {
+				"navigationStyle":"custom",
+				"disableScroll":true
+			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationStyle":"custom",
+				"disableScroll":true
+			}
+		},
+		{
+			"path": "pages/goods/goods",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		},
+		{
+			"path": "pages/chat/chat",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/address/edit/edit",
+			"style": {
+				"navigationBarTitleText": "编辑收件人地址"
+			}
+		},
+		{
+			"path": "pages/address/address",
+			"style": {
+				"navigationBarTitleText": "收货地址"
+			}
+		},
+		{
+			"path": "pages/sendmsg/snedmsg",
+			"style": {
+				"navigationBarTitleText": "发表评价"
+			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "我的订单"
+			}
+		},
+		{
+			
+			"path": "pages/payorder/payorder",
+			"style": {
+				"navigationBarTitleText": "创建订单"
+			}
+		},
+		
+			
+	
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	
+	
+	"tabBar": {
+	    "color": "#7A7E83",
+	    "selectedColor": "#3cc51f",
+	    "borderStyle": "black",
+	    "backgroundColor": "#ffffff",
+	    "list": 
+		[
+			
+			{
+				"pagePath":"pages/index/index",
+				"text": "首页"
+			}, 
+			{
+				"pagePath":"pages/shopping/shopping",
+				"text": "商城"
+			},
+			{
+				"pagePath":"pages/shoppCart/shoppCart",
+				"text": "购物车"
+			},
+			{
+				"pagePath":"pages/home/home",
+				"text": "我的"
+			}
+		]
+	}
+} 	

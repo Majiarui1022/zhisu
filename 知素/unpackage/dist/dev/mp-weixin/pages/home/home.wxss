@@ -1,0 +1,225 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 页面左右间距 */
+/* 文字尺寸 */
+/*文字颜色*/
+/* 边框颜色 */
+/* 图片加载中颜色 */
+/* 行为相关颜色 */
+.home-box, page {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.home-box .home-header, page .home-header {
+    position: relative;
+}
+.home-box .home-header .image-bj, page .home-header .image-bj {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+}
+.home-box .home-header .image-bj image, page .home-header .image-bj image {
+        width: 100%;
+        height: 100%;
+        display: block;
+}
+.home-box .home-header .index-navbar, page .home-header .index-navbar {
+      width: 100%;
+      font-size: 32rpx;
+      font-family: SimHei;
+      color: #333333;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      text-align: center;
+}
+.home-box .home-header .userinfo, page .home-header .userinfo {
+      overflow: hidden;
+      padding-left: 50rpx;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      width: 100%;
+      margin: 35rpx 0;
+}
+.home-box .home-header .userinfo .userheader-img, page .home-header .userinfo .userheader-img {
+        width: 100rpx;
+        height: 100rpx;
+        float: left;
+        border-radius: 50%;
+        background: red;
+        margin-right: 24rpx;
+}
+.home-box .home-header .userinfo .user-info-menu, page .home-header .userinfo .user-info-menu {
+        float: left;
+}
+.home-box .home-header .userinfo .user-info-menu .user-name, page .home-header .userinfo .user-info-menu .user-name {
+          font-size: 32rpx;
+          font-family: SimHei;
+          color: #3a3a3a;
+          line-height: 56rpx;
+}
+.home-box .home-header .userinfo .user-info-menu .user-ID, page .home-header .userinfo .user-info-menu .user-ID {
+          font-size: 26rpx;
+          font-family: SimHei;
+          line-height: 50rpx;
+          color: #8f7d6d;
+}
+.home-box .home-header .home-nav, page .home-header .home-nav {
+      width: 100%;
+      height: 140rpx;
+      background: -webkit-gradient(linear, left bottom, left top, from(white), to(rgba(255, 255, 255, 0.2)));
+      background: -o-linear-gradient(bottom, white 0%, rgba(255, 255, 255, 0.2) 100%);
+      background: linear-gradient(0deg, white 0%, rgba(255, 255, 255, 0.2) 100%);
+      -webkit-box-shadow: 0px -1px 5px 0px rgba(126, 126, 126, 0.11);
+              box-shadow: 0px -1px 5px 0px rgba(126, 126, 126, 0.11);
+}
+.home-box .home-header .home-nav > view, page .home-header .home-nav > view {
+        width: 50%;
+        height: 100%;
+        float: left;
+        padding-top: 18rpx;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+}
+.home-box .home-header .home-nav > view view, page .home-header .home-nav > view view {
+          color: #313131;
+          font-size: 36rpx;
+          text-align: center;
+          font-family: SimHei;
+}
+.home-box .home-header .home-nav > view .number, page .home-header .home-nav > view .number {
+          margin-bottom: 26rpx;
+}
+.home-box .menu, page .menu {
+    width: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+.home-box .menu .contents, page .menu .contents {
+      width: 100%;
+      height: 100%;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      background: #F3F3F3;
+}
+.home-box .menu .contents .order-tit-box, page .menu .contents .order-tit-box {
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 18rpx 30rpx 8rpx;
+        background: #FFFFFF;
+        font-size: 30rpx;
+        color: #313131;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+}
+.home-box .menu .contents .order-tit-box .order-all, page .menu .contents .order-tit-box .order-all {
+          color: #ACACAC;
+}
+.home-box .menu .contents .order-nav-list, page .menu .contents .order-nav-list {
+        width: 100%;
+        height: 132rpx;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        background: #FFFFFF;
+}
+.home-box .menu .contents .order-nav-list > view, page .menu .contents .order-nav-list > view {
+          width: 25%;
+          height: 100%;
+          color: #313131;
+          padding: 32rpx 0;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+}
+.home-box .menu .contents .order-nav-list > view .num, page .menu .contents .order-nav-list > view .num {
+            text-align: center;
+            font-size: 26rpx;
+            font-family: SimHei;
+            margin-bottom: 16rpx;
+}
+.home-box .menu .contents .order-nav-list > view .name, page .menu .contents .order-nav-list > view .name {
+            text-align: center;
+            font-size: 26rpx;
+            font-family: SimHei;
+}
+.home-box .menu .contents .tab-list, page .menu .contents .tab-list {
+        width: 100%;
+        padding-left: 26rpx;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        background: #FFFFFF;
+}
+.home-box .menu .contents .tab-list .row, page .menu .contents .tab-list .row {
+          width: 100%;
+          height: 91rpx;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+}
+.home-box .menu .contents .tab-list .row .row-image, page .menu .contents .tab-list .row .row-image {
+            width: 54rpx;
+}
+.home-box .menu .contents .tab-list .row .row-con, page .menu .contents .tab-list .row .row-con {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            height: 100%;
+            border-bottom: 2rpx solid #ECECEC;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+}
+.home-box .menu .contents .tab-list .row .row-con .cal-name, page .menu .contents .tab-list .row .row-con .cal-name {
+              width: 100%;
+              font-size: 28rpx;
+              font-family: SimHei;
+              color: #4f4f4f;
+}
+
