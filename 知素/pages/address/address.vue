@@ -124,7 +124,7 @@
 					key:'selectAddress',
 					data:row,
 					success() {
-						_that.$api.prePage().addressData = _that;
+						// _that.$api.prePage().addressData = _that;
 						uni.navigateBack();
 					}
 				})

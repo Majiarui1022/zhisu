@@ -18,7 +18,7 @@
 					<view class="number">5</view>
 					<view>优惠券</view>
 				</view>
-				<view class="manney-box">
+				<view class="manney-box" @click="navTo('/pages/userwallet/userwallet')">
 					<view class="number">1365</view>
 					<view>返现</view>
 				</view>
@@ -30,7 +30,7 @@
 			<view class="contents">
 				<view class="order-tit-box">
 					<view class="order-tit">我的订单</view>
-					<view class="order-all">全部订单<text class="yticon icon-you"></text></view>
+					<view class="order-all"  @click="navTo('/pages/order/order?state=0')">全部订单<text class="yticon icon-you"></text></view>
 				</view>
 				<view class="order-nav-list">
 					<view class="row">
@@ -56,7 +56,7 @@
 				<view class="tab-list">
 					<view class="row">
 						<view class="row-image"></view>
-						<view class="row-con"  @eventClick="navTo('/pages/address/address')">
+						<view class="row-con"  @click="navTo('/pages/address/address')">
 							<view class="cal-name">收货地址</view>
 						</view>
 					</view>

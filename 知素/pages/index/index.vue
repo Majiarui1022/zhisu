@@ -74,7 +74,7 @@
 			<view class="index-content">
 				<view class="con-title">主打产品</view>
 				<view class="con-menu">
-					<view class="product">
+					<view class="product"  @click="navTo('/pages/goods/goods?id=4')" >
 						<view class="product-image"></view>
 						<view class="name">商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</view>
 						<view class="info">
@@ -141,6 +141,16 @@
 
 		},
 		methods: {
+			//路由跳转
+			navTo(url){
+				// if(!this.hasLogin){
+				// 	url = '/pages/public/login';
+				// }
+				uni.navigateTo({  
+					url
+				})  
+			}, 
+			
 			//滚动到顶部/左边触发
 			upper(e){
 				console.log('顶部')
@@ -170,6 +180,7 @@
 	.index-box{
 		width: 100%;
 		height: 100%;
+		background: #EEF3F8;
 		.index-navbar{
 			width: 100%;
 			background:linear-gradient(130deg,rgba(115,95,247,1),rgba(83,122,251,1));

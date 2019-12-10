@@ -1,5 +1,9 @@
 <template>
 	<view class="goods-box">
+		<video id="myVideo" class="myVideo" :src="videoSrc" v-show="isPlayVideo" :show-fullscreen-btn="showFullscreenBtn" :direction="videoDirection" :show-play-btn="showPlayBtn" @pause="videoPause" @fullscreenchange="viderFullscreen">
+			<!-- <cover-image class="stopPlayVideoBtn" @click="stopPlayVideo" src="/static/img/close.png"></cover-image> -->
+		</video>
+		
 		<scroll-view :scroll-top="scrollTop"  :style="{'height':windowHeight + 'px','padding-bottom':'100rpx','box-sizing':'border-box','background':'#f8f8f8'}" style="100%" scroll-y="true" class="scroll-Y" @scrolltoupper="upper" @scrolltolower="lower"
 		@scroll="scroll">
 		
@@ -75,7 +79,7 @@
 			<view class="info-box pro-evaluate">
 				<view class="row">
 					<text class="row-tit">商品评价(102)</text>
-					<text class="row-link">查看全部<text class="yticon icon-you"></text></text>
+					<text class="row-link" @click="goallmassgae('/pages/goods/allmsage')">查看全部<text class="yticon icon-you"></text></text>
 				</view>
 				<view class="comment">
 					<view class="face">
@@ -90,7 +94,7 @@
 						</view>
 						<view class="evaluate-image-box">
 							<!-- 视频列表循环 -->
-							<view class="box">
+							<view class="box" @tap="playVideo">
 								<image src="../../static/temp/cate14.jpg" mode=""></image>
 								<view class="playbtn">
 									<view class="icon bofang"></view>
@@ -100,10 +104,10 @@
 							<view class="box" @click="ShowImage">
 								<image src="../../static/temp/cate14.jpg" mode=""></image>
 							</view>
-							<view class="box">
+							<view class="box" @click="ShowImage">
 								<image src="../../static/temp/cate14.jpg" mode=""></image>
 							</view>
-							<view class="box">
+							<view class="box" @click="ShowImage">
 								<image src="../../static/temp/cate14.jpg" mode=""></image>
 							</view>
 						</view>
@@ -151,19 +155,17 @@
 					<view class="item-list">
 						<text 
 							class="tit"
-							:class="{selected: childItem.selected}"
 						>
+							<!-- :class="{selected: childItem.selected}" -->
 							123
 						</text>
 						<text
 							class="tit"
-							:class="{selected: childItem.selected}"
 						>
 							456
 						</text>
 						<text
 							class="tit"
-							:class="{selected: childItem.selected}"
 						>
 							789
 						</text>
@@ -175,19 +177,16 @@
 					<view class="item-list">
 						<text 
 							class="tit"
-							:class="{selected: childItem.selected}"
 						>
 							123
 						</text>
 						<text
 							class="tit"
-							:class="{selected: childItem.selected}"
 						>
 							456
 						</text>
 						<text
 							class="tit"
-							:class="{selected: childItem.selected}"
 						>
 							789
 						</text>
@@ -199,19 +198,16 @@
 					<view class="item-list">
 						<text 
 							class="tit"
-							:class="{selected: childItem.selected}"
 						>
 							123
 						</text>
 						<text
 							class="tit"
-							:class="{selected: childItem.selected}"
 						>
 							456
 						</text>
 						<text
 							class="tit"
-							:class="{selected: childItem.selected}"
 						>
 							789
 						</text>
@@ -229,7 +225,7 @@
 					<view class="icon fenxiang"></view>
 					<view class="text">分享</view>
 				</view>
-				<view class="box" @tap="toChat">
+				<view class="box" @tap="toChat('/pages/chat/chat')">
 					<view class="icon kefu"></view>
 					<view class="text">客服</view>
 				</view>
@@ -240,7 +236,7 @@
 			</view>
 			<view class="btn">
 				<view class="joinCart" @tap="joinCart">加入购物车</view>
-				<view class="buy" @tap="buy">立即购买</view>
+				<view class="buy" @click="buy('/pages/payorder/payorder')">立即购买</view>
 			</view>
 		</view>
 	</view>
@@ -257,8 +253,18 @@
 				indicatorDots: true,
 				autoplay: true,
 				interval: 2000,
-				duration: 500
+				duration: 500,
+				isPlayVideo:true,
+				videoDirection:0,
+				showPlayBtn:true,
+				showFullscreenBtn:true,
+				// require('../../static/happy.mp4')
+				// https://mp4.vjshi.com/2017-06-17/ed1d63669bea39f5ef078c4e194291d6.mp4
+				videoSrc:'https://mp4.vjshi.com/2017-06-17/ed1d63669bea39f5ef078c4e194291d6.mp4'
 			}
+		},
+		onReady: function (res) {
+			this.videoContext = uni.createVideoContext('myVideo')
 		},
 		onShow() {
 			var _that = this
@@ -278,6 +284,31 @@
 			},
 			scroll(){
 			
+			},
+			
+			//购买商品
+			// buy(){
+				
+			// },
+			//路由跳转
+			buy(url){
+				// if(!this.hasLogin){
+				// 	url = '/pages/public/login';
+				// }
+				uni.navigateTo({  
+					url
+				})  
+			}, 
+			
+			toChat(url){
+				uni.navigateTo({
+					url
+				})  
+			},	
+			goallmassgae(url){
+				uni.navigateTo({
+					url
+				})
 			},
 			
 			
@@ -307,7 +338,37 @@
 				});
 			},
 			
-			stopPrevent(){}
+			
+			stopPrevent(){},
+			
+			
+			//点击播放视频
+			playVideo() {
+				console.log(this.videoSrc)
+				// this.isPlayVideo = true;
+				this.$nextTick(function() {
+					this.videoContext.requestFullScreen({direction:0});
+				});
+				
+			},
+			stopPlayVideo(){
+				this.videoSrc = '';
+				this.videoContext.pause();
+			},
+			
+			//@fullscreenchange
+			viderFullscreen(e){
+				if(e.detail.fullScreen){
+					this.videoContext.play();
+				}else{
+					this.stopPlayVideo();
+				}
+			},
+			//视频暂停
+			videoPause(){
+				// this.isPlayVideo = false;
+				// this.videoSrc = '';
+			}, 
 		}
 	}
 </script>
@@ -316,6 +377,12 @@
 	page{
 		width: 100%;
 		height: 100%;
+	}
+	
+	.myVideo{
+		position: fixed;
+		top: 50%;
+		right: 100%;
 	}
 	.goods-box{
 		width: 100%;
@@ -548,7 +615,7 @@
 						color: #999;
 					}
 					.content{
-						padding:0 0 0 20rpx;
+						padding:10rpx 0;
 						font-size: 28rpx;
 					}
 					.lei-time{

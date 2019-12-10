@@ -52,15 +52,15 @@
 			}
 		},
 		{
-			"path": "pages/sendmsg/snedmsg",
-			"style": {
-				"navigationBarTitleText": "发表评价"
-			}
-		},
-		{
 			"path": "pages/order/order",
 			"style": {
 				"navigationBarTitleText": "我的订单"
+			}
+		},
+		{
+			"path": "pages/goods/allmsage",
+			"style": {
+				"navigationBarTitleText": "商品评论"
 			}
 		},
 		{
@@ -70,6 +70,19 @@
 				"navigationBarTitleText": "创建订单"
 			}
 		},
+		{
+			"path": "pages/sendmsg/sendmsg",
+			"style": {
+				"navigationBarTitleText": "发表评价"
+			}
+		},
+		{
+			"path": "pages/userwallet/userwallet",
+			"style": {
+				"navigationBarTitleText": "返现"
+			}
+		}
+		
 		
 			
 	
@@ -97,10 +110,6 @@
 			{
 				"pagePath":"pages/shopping/shopping",
 				"text": "商城"
-			},
-			{
-				"pagePath":"pages/shoppCart/shoppCart",
-				"text": "购物车"
 			},
 			{
 				"pagePath":"pages/home/home",
