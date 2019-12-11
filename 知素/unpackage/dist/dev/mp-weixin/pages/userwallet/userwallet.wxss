@@ -128,8 +128,12 @@
 .payka .money .pire .income-icn {
         width: 48rpx;
         height: 48rpx;
-        background: #95c1fa;
         border-radius: 50%;
+}
+.payka .money .pire .income-icn image {
+          width: 100%;
+          height: 100%;
+          display: block;
 }
 .payka .money .pire .income-info {
         margin-left: 20rpx;

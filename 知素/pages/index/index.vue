@@ -72,7 +72,7 @@
 			
 			<!-- 主打产品 -->
 			<view class="index-content">
-				<view class="con-title">主打产品</view>
+				<view class="con-title"><image src="../../static/zdbj.png" mode=""></image></view>
 				<view class="con-menu">
 					<view class="product"  @click="navTo('/pages/goods/goods?id=4')" >
 						<view class="product-image"></view>
@@ -130,6 +130,8 @@
 				_that.windowHeight = res.windowHeight
 			  }
 			})
+		
+			
 		},
 		
 		onReachBottom() {
@@ -180,7 +182,6 @@
 	.index-box{
 		width: 100%;
 		height: 100%;
-		background: #EEF3F8;
 		.index-navbar{
 			width: 100%;
 			background:linear-gradient(130deg,rgba(115,95,247,1),rgba(83,122,251,1));
@@ -242,6 +243,7 @@
 							width: 92%;
 							padding: 10rpx 4%;
 							font-size:28rpx;
+							height: 70rpx;
 							font-family:SimHei;
 							color:rgba(51,51,51,1);
 							line-height: 40rpx;
@@ -277,6 +279,11 @@
 				text-align: center;
 				line-height: 70rpx;
 				color: #000000;
+				image{
+					width: 100%;
+					height: 100%;
+					display: block;
+				}
 			}
 			.con-menu{
 				width: 92%;
@@ -300,10 +307,10 @@
 						width: 92%;
 						padding: 10rpx 4%;
 						font-size:28rpx;
+						height: 70rpx;
 						font-family:SimHei;
 						color:rgba(51,51,51,1);
 						line-height: 40rpx;
-						width: 100%;
 						text-overflow: -o-ellipsis-lastline;
 						overflow: hidden;
 						text-overflow: ellipsis;

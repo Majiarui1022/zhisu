@@ -59,9 +59,9 @@
 		<view class="input-box" :class="showEmji" @touchmove.stop.prevent="discard">
 			<!-- H5下不能录音，输入栏布局改动一下 -->
 			<!-- #ifndef H5 -->
-			<view class="voice">
+			<!-- <view class="voice">
 				<view class="icon" :class="isVoice?'jianpan':'yuyin'" @tap="switchVoice"></view>
-			</view>
+			</view> -->
 			<!-- #endif -->
 			<!-- #ifdef H5 -->
 			<view class="more" @tap="chooseImage">

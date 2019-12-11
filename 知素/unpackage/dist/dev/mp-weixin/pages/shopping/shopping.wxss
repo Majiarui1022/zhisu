@@ -37,6 +37,24 @@
 }
 .shopping-box .content {
     background-color: #f8f8f8;
+    position: relative;
+}
+.shopping-box .content .kf-box {
+      width: 80rpx;
+      height: 80rpx;
+      background: white;
+      -webkit-box-shadow: 3rpx 3rpx 2rpx 0 rgba(0, 0, 0, 0.1), -3rpx -3rpx 2rpx 0 rgba(0, 0, 0, 0.09);
+              box-shadow: 3rpx 3rpx 2rpx 0 rgba(0, 0, 0, 0.1), -3rpx -3rpx 2rpx 0 rgba(0, 0, 0, 0.09);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 52rpx;
+      right: 62rpx;
+      z-index: 50;
+}
+.shopping-box .content .kf-box image {
+        width: 100%;
+        height: 100%;
+        display: block;
 }
 .shopping-box .content {
     display: -webkit-box;

@@ -17,9 +17,11 @@
 /* 边框颜色 */
 /* 图片加载中颜色 */
 /* 行为相关颜色 */
-.home-box, page {
+page {
   width: 100%;
   height: 100%;
+}
+.home-box {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30,10 +32,10 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.home-box .home-header, page .home-header {
+.home-box .home-header {
     position: relative;
 }
-.home-box .home-header .image-bj, page .home-header .image-bj {
+.home-box .home-header .image-bj {
       position: absolute;
       left: 0;
       top: 0;
@@ -41,12 +43,12 @@
       height: 100%;
       z-index: -1;
 }
-.home-box .home-header .image-bj image, page .home-header .image-bj image {
+.home-box .home-header .image-bj image {
         width: 100%;
         height: 100%;
         display: block;
 }
-.home-box .home-header .index-navbar, page .home-header .index-navbar {
+.home-box .home-header .index-navbar {
       width: 100%;
       font-size: 32rpx;
       font-family: SimHei;
@@ -55,7 +57,7 @@
               box-sizing: border-box;
       text-align: center;
 }
-.home-box .home-header .userinfo, page .home-header .userinfo {
+.home-box .home-header .userinfo {
       overflow: hidden;
       padding-left: 50rpx;
       -webkit-box-sizing: border-box;
@@ -63,7 +65,7 @@
       width: 100%;
       margin: 35rpx 0;
 }
-.home-box .home-header .userinfo .userheader-img, page .home-header .userinfo .userheader-img {
+.home-box .home-header .userinfo .userheader-img {
         width: 100rpx;
         height: 100rpx;
         float: left;
@@ -71,22 +73,22 @@
         background: red;
         margin-right: 24rpx;
 }
-.home-box .home-header .userinfo .user-info-menu, page .home-header .userinfo .user-info-menu {
+.home-box .home-header .userinfo .user-info-menu {
         float: left;
 }
-.home-box .home-header .userinfo .user-info-menu .user-name, page .home-header .userinfo .user-info-menu .user-name {
+.home-box .home-header .userinfo .user-info-menu .user-name {
           font-size: 32rpx;
           font-family: SimHei;
           color: #3a3a3a;
           line-height: 56rpx;
 }
-.home-box .home-header .userinfo .user-info-menu .user-ID, page .home-header .userinfo .user-info-menu .user-ID {
+.home-box .home-header .userinfo .user-info-menu .user-ID {
           font-size: 26rpx;
           font-family: SimHei;
           line-height: 50rpx;
           color: #8f7d6d;
 }
-.home-box .home-header .home-nav, page .home-header .home-nav {
+.home-box .home-header .home-nav {
       width: 100%;
       height: 140rpx;
       background: -webkit-gradient(linear, left bottom, left top, from(white), to(rgba(255, 255, 255, 0.2)));
@@ -95,38 +97,38 @@
       -webkit-box-shadow: 0px -1px 5px 0px rgba(126, 126, 126, 0.11);
               box-shadow: 0px -1px 5px 0px rgba(126, 126, 126, 0.11);
 }
-.home-box .home-header .home-nav > view, page .home-header .home-nav > view {
+.home-box .home-header .home-nav > view {
         width: 50%;
         height: 100%;
         float: left;
-        padding-top: 18rpx;
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
 }
-.home-box .home-header .home-nav > view view, page .home-header .home-nav > view view {
+.home-box .home-header .home-nav > view view {
           color: #313131;
           font-size: 36rpx;
           text-align: center;
           font-family: SimHei;
+          line-height: 36rpx;
 }
-.home-box .home-header .home-nav > view .number, page .home-header .home-nav > view .number {
-          margin-bottom: 26rpx;
+.home-box .home-header .manney-box > view, .home-box .home-header .coupon-box > view {
+      padding: 17rpx 0;
 }
-.home-box .menu, page .menu {
+.home-box .menu {
     width: 100%;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1;
 }
-.home-box .menu .contents, page .menu .contents {
+.home-box .menu .contents {
       width: 100%;
       height: 100%;
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       background: #F3F3F3;
 }
-.home-box .menu .contents .order-tit-box, page .menu .contents .order-tit-box {
+.home-box .menu .contents .order-tit-box {
         width: 100%;
         display: -webkit-box;
         display: -webkit-flex;
@@ -143,10 +145,10 @@
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
 }
-.home-box .menu .contents .order-tit-box .order-all, page .menu .contents .order-tit-box .order-all {
+.home-box .menu .contents .order-tit-box .order-all {
           color: #ACACAC;
 }
-.home-box .menu .contents .order-nav-list, page .menu .contents .order-nav-list {
+.home-box .menu .contents .order-nav-list {
         width: 100%;
         height: 132rpx;
         display: -webkit-box;
@@ -155,7 +157,7 @@
         display: flex;
         background: #FFFFFF;
 }
-.home-box .menu .contents .order-nav-list > view, page .menu .contents .order-nav-list > view {
+.home-box .menu .contents .order-nav-list > view {
           width: 25%;
           height: 100%;
           color: #313131;
@@ -163,25 +165,25 @@
           -webkit-box-sizing: border-box;
                   box-sizing: border-box;
 }
-.home-box .menu .contents .order-nav-list > view .num, page .menu .contents .order-nav-list > view .num {
+.home-box .menu .contents .order-nav-list > view .num {
             text-align: center;
             font-size: 26rpx;
             font-family: SimHei;
             margin-bottom: 16rpx;
 }
-.home-box .menu .contents .order-nav-list > view .name, page .menu .contents .order-nav-list > view .name {
+.home-box .menu .contents .order-nav-list > view .name {
             text-align: center;
             font-size: 26rpx;
             font-family: SimHei;
 }
-.home-box .menu .contents .tab-list, page .menu .contents .tab-list {
+.home-box .menu .contents .tab-list {
         width: 100%;
         padding-left: 26rpx;
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
         background: #FFFFFF;
 }
-.home-box .menu .contents .tab-list .row, page .menu .contents .tab-list .row {
+.home-box .menu .contents .tab-list .row {
           width: 100%;
           height: 91rpx;
           display: -webkit-box;
@@ -193,10 +195,22 @@
               -ms-flex-align: center;
                   align-items: center;
 }
-.home-box .menu .contents .tab-list .row .row-image, page .menu .contents .tab-list .row .row-image {
+.home-box .menu .contents .tab-list .row .row-image {
             width: 54rpx;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: start;
+            -webkit-justify-content: flex-start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center;
 }
-.home-box .menu .contents .tab-list .row .row-con, page .menu .contents .tab-list .row .row-con {
+.home-box .menu .contents .tab-list .row .row-con {
             -webkit-box-flex: 1;
             -webkit-flex: 1;
                 -ms-flex: 1;
@@ -216,7 +230,7 @@
                 -ms-flex-pack: justify;
                     justify-content: space-between;
 }
-.home-box .menu .contents .tab-list .row .row-con .cal-name, page .menu .contents .tab-list .row .row-con .cal-name {
+.home-box .menu .contents .tab-list .row .row-con .cal-name {
               width: 100%;
               font-size: 28rpx;
               font-family: SimHei;

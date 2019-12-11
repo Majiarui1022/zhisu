@@ -1,27 +1,29 @@
 <template>
 	<view class="send-msg">
-		<scroll-view :scroll-top="scrollTop" style="flex: 1;padding: 0 30rpx 98rpx;" scroll-y="true" class="scroll-Y">
-			<view class="pro-box">
-				<view class="pro-iamge-box"></view>
-				<view class="info">
-					<view class="name">极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝</view>
-					<view class="guige">规格：XL</view>
+		<scroll-view :scroll-top="scrollTop" style="flex: 1;height: 100%;" scroll-y="true" class="scroll-Y">
+			<view class="send-pad">
+				<view class="pro-box">
+					<view class="pro-iamge-box"></view>
+					<view class="info">
+						<view class="name">极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝极品燕窝</view>
+						<view class="guige">规格：XL</view>
+					</view>
 				</view>
-			</view>
-			
-			<view class="message">
-				<textarea value="" placeholder="宝贝满足你的期待吗？说说你的使用心得，分享给朋友吧。" :maxlength="-1"/>
-			</view>
-			
-			<view  class="addphoto-box">
-				<ul>
-					<li class="kuang photo" v-for="(item,index) in imagelist" :key="index">
-						<image :src="imagelist[index]" mode=""></image>
-					</li>
-					<li class="kuang but" @click="openPopup">
-						<image src="../../static/addphoto.png" mode=""></image>
-					</li>
-				</ul>
+				
+				<view class="message">
+					<textarea value="" placeholder="宝贝满足你的期待吗？说说你的使用心得，分享给朋友吧。" :maxlength="-1"/>
+				</view>
+				
+				<view  class="addphoto-box">
+					<ul>
+						<li class="kuang photo" v-for="(item,index) in imagelist" :key="index">
+							<image :src="imagelist[index]" mode=""></image>
+						</li>
+						<li class="kuang but" @click="openPopup">
+							<image src="../../static/addphoto.png" mode=""></image>
+						</li>
+					</ul>
+				</view>
 			</view>
 		</scroll-view>
 		<view class="send-but">发布</view>
@@ -113,8 +115,15 @@
 	}
 	.send-msg{
 		width: 100%;
-		height: 100%;
-		display: flex;
+		height: calc(100% - 98rpx);
+		.send-pad{
+			width: 100%;
+			height: 100%;
+			padding: 0 30rpx 0;
+			box-sizing: border-box;
+			display: flex;
+			flex-wrap: wrap;
+		}
 		.send-but{
 			position: fixed;
 			left: 0;

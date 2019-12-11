@@ -19,6 +19,9 @@
 					</view>
 				</view>
 			</scroll-view>
+			<view class="kf-box">
+				<image src="../../static/shoppkf.png" mode=""></image>
+			</view>
 		</view>
 	</view>
 </template>
@@ -136,6 +139,23 @@
 		}
 		.content {
 			background-color: #f8f8f8;
+			position: relative;
+			.kf-box{
+				width:80rpx;
+				height:80rpx;
+				background:rgba(255,255,255,1);
+				box-shadow:3rpx 3rpx 2rpx 0 rgba(0, 0, 0, 0.1), -3rpx -3rpx 2rpx 0 rgba(0, 0, 0, 0.09);
+				border-radius:50%;
+				position: absolute;
+				bottom: 52rpx;
+				right: 62rpx;
+				z-index: 50;
+				image{
+					width: 100%;
+					height: 100%;
+					display: block;
+				}
+			}
 		}
 		.content {
 			display: flex;

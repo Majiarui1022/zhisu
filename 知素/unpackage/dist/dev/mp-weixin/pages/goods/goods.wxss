@@ -513,6 +513,30 @@ page {
         background: #fbebee;
         color: #fa436a;
 }
+.goods-box .attr-content .item-list .rest, .goods-box .attr-content .item-list .add {
+        padding: 0 20rpx;
+        height: 60rpx;
+        color: #303133;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        background: #eee;
+}
+.goods-box .attr-content .item-list .number {
+        width: 100rpx;
+        height: 60rpx;
+        text-align: center;
+        line-height: 60rpx;
+}
 .goods-box .popup {
     position: fixed;
     left: 0;
@@ -686,6 +710,18 @@ page {
         -webkit-flex-wrap: wrap;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
+        position: relative;
+}
+.goods-box .footer .icons .box .button-share {
+          width: 100%;
+          height: 100%;
+          display: block;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          left: 0;
+          top: 0;
+          opacity: 0;
 }
 .goods-box .footer .icons .box .icon {
           font-size: 40rpx;
@@ -717,7 +753,7 @@ page {
 .goods-box .footer .btn .joinCart,
       .goods-box .footer .btn .buy {
         height: 80rpx;
-        padding: 0 40rpx;
+        padding: 0 60rpx;
         color: #fff;
         display: -webkit-box;
         display: -webkit-flex;

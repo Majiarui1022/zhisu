@@ -128,6 +128,7 @@
 			 * 修复app端点击除全部订单外的按钮进入时不加载数据的问题
 			 * 替换onLoad下代码即可
 			 */
+			console.log(options.state)
 			this.tabCurrentIndex = +options.state;
 			// #ifndef MP
 			this.loadData()
@@ -147,7 +148,9 @@
 				let index = this.tabCurrentIndex;
 				let navItem = this.navList[index];
 				let state = navItem.state;
-				
+				console.log(index)
+				console.log(this.navList)
+				console.log(state)
 				if(source === 'tabChange' && navItem.loaded === true){
 					//tab切换只有第一次需要加载数据
 					return;

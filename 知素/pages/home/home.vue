@@ -55,13 +55,17 @@
 				</view>
 				<view class="tab-list">
 					<view class="row">
-						<view class="row-image"></view>
+						<view class="row-image">
+							<image src="../../static/addressicn.png" style="width: 29rpx;height: 41rpx;" mode=""></image>
+						</view>
 						<view class="row-con"  @click="navTo('/pages/address/address')">
 							<view class="cal-name">收货地址</view>
 						</view>
 					</view>
 					<view class="row">
-						<view class="row-image"></view>
+						<view class="row-image">
+							<image src="../../static/home-kf.png" style="width: 35rpx;height: 32rpx;" mode=""></image>
+						</view>
 						<view class="row-con">
 							<view class="cal-name">客户服务</view>
 						</view>
@@ -115,9 +119,11 @@
 </script>
 
 <style lang="scss">
-	.home-box,page {
+	page{
 		width: 100%;
 		height: 100%;
+	}
+	.home-box {
 		display: flex;
 		flex-direction: column;
 		.home-header {
@@ -190,17 +196,20 @@
 					width: 50%;
 					height: 100%;
 					float: left;
-					padding-top: 18rpx;
 					box-sizing: border-box;
 					view{
 						color: #313131;
 						font-size:36rpx;
 						text-align: center;
 						font-family:SimHei;
+						line-height: 36rpx;
 					}
-					.number{
-						margin-bottom: 26rpx;
-					}
+				}
+			}
+			.manney-box,.coupon-box{
+				&>view{
+					padding: 17rpx 0;
+					
 				}
 			}
 		}
@@ -262,6 +271,9 @@
 						align-items: center;
 						.row-image{
 							width: 54rpx;
+							display: flex;
+							justify-content: flex-start;
+							align-items: center;
 						}
 						.row-con{
 							flex: 1;

@@ -366,6 +366,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -384,7 +393,8 @@ var _default =
       showFullscreenBtn: true,
       // require('../../static/happy.mp4')
       // https://mp4.vjshi.com/2017-06-17/ed1d63669bea39f5ef078c4e194291d6.mp4
-      videoSrc: 'https://mp4.vjshi.com/2017-06-17/ed1d63669bea39f5ef078c4e194291d6.mp4' };
+      videoSrc: 'https://mp4.vjshi.com/2017-06-17/ed1d63669bea39f5ef078c4e194291d6.mp4',
+      pronumber: 1 };
 
   },
   onReady: function onReady(res) {
@@ -492,6 +502,21 @@ var _default =
     videoPause: function videoPause() {
       // this.isPlayVideo = false;
       // this.videoSrc = '';
+    },
+
+
+    //分享商品
+    onShareAppMessage: function onShareAppMessage(res) {
+      console.log(res);
+      if (res.from === 'button') {
+        // 来自页面内转发按钮
+        console.log(res.target);
+      }
+      return {
+        title: '自定义转发标题',
+        path: '/pages/goods/goods?id=123',
+        imageUrl: '../../static/img/face.jpg' };
+
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

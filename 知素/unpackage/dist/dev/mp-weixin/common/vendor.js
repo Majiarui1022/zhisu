@@ -734,7 +734,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -1500,7 +1500,7 @@ uni$1;exports.default = _default;
 
 /***/ }),
 
-/***/ 120:
+/***/ 128:
 /*!***********************************************************************************!*\
   !*** F:/project/知素小程序/zhisu/知素/components/mpvue-citypicker/city-data/province.js ***!
   \***********************************************************************************/
@@ -1650,7 +1650,7 @@ provinceData;exports.default = _default;
 
 /***/ }),
 
-/***/ 121:
+/***/ 129:
 /*!*******************************************************************************!*\
   !*** F:/project/知素小程序/zhisu/知素/components/mpvue-citypicker/city-data/city.js ***!
   \*******************************************************************************/
@@ -3164,7 +3164,7 @@ cityData;exports.default = _default;
 
 /***/ }),
 
-/***/ 122:
+/***/ 130:
 /*!*******************************************************************************!*\
   !*** F:/project/知素小程序/zhisu/知素/components/mpvue-citypicker/city-data/area.js ***!
   \*******************************************************************************/
@@ -21976,7 +21976,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -21997,14 +21997,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -22080,7 +22080,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -24198,7 +24198,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationStyle": "custom", "disableScroll": true, "usingComponents": {} }, "pages/shoppCart/shoppCart": { "navigationBarTitleText": "购物车", "usingComponents": {} }, "pages/shopping/shopping": { "navigationStyle": "custom", "disableScroll": true, "usingComponents": {} }, "pages/home/home": { "navigationStyle": "custom", "disableScroll": true, "usingComponents": {} }, "pages/goods/goods": { "navigationBarTitleText": "详情", "usingComponents": {} }, "pages/chat/chat": { "navigationBarTitleText": "", "usingComponents": {} }, "pages/address/edit/edit": { "navigationBarTitleText": "编辑收件人地址", "usingComponents": { "mpvue-city-picker": "/components/mpvue-citypicker/mpvueCityPicker" } }, "pages/address/address": { "navigationBarTitleText": "收货地址", "usingComponents": {} }, "pages/sendmsg/sendmsg": { "navigationBarTitleText": "发表评价", "usingComponents": { "uni-popup": "/components/uni-popup/uni-popup" } }, "pages/order/order": { "navigationBarTitleText": "我的订单", "usingComponents": { "uni-load-more": "/components/uni-load-more/uni-load-more", "empty": "/components/empty" } }, "pages/goods/allmsage": { "navigationBarTitleText": "商品评论", "usingComponents": {} }, "pages/payorder/payorder": { "navigationBarTitleText": "创建订单", "usingComponents": {} }, "pages/userwallet/userwallet": { "navigationBarTitleText": "返现", "usingComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationStyle": "custom", "disableScroll": true, "usingComponents": {} }, "pages/shoppCart/shoppCart": { "navigationBarTitleText": "购物车", "usingComponents": {} }, "pages/shopping/shopping": { "navigationStyle": "custom", "disableScroll": true, "usingComponents": {} }, "pages/home/home": { "navigationStyle": "custom", "disableScroll": true, "usingComponents": {} }, "pages/goods/goods": { "navigationBarTitleText": "详情", "usingComponents": {} }, "pages/chat/chat": { "navigationBarTitleText": "", "usingComponents": {} }, "pages/address/edit/edit": { "navigationBarTitleText": "编辑收件人地址", "usingComponents": { "mpvue-city-picker": "/components/mpvue-citypicker/mpvueCityPicker" } }, "pages/address/address": { "navigationBarTitleText": "收货地址", "usingComponents": {} }, "pages/order/order": { "navigationBarTitleText": "我的订单", "usingComponents": { "uni-load-more": "/components/uni-load-more/uni-load-more", "empty": "/components/empty" } }, "pages/goods/allmsage": { "navigationBarTitleText": "商品评论", "usingComponents": {} }, "pages/payorder/payorder": { "navigationBarTitleText": "创建订单", "usingComponents": {} }, "pages/sendmsg/sendmsg": { "navigationBarTitleText": "发表评价", "usingComponents": { "uni-popup": "/components/uni-popup/uni-popup" } }, "pages/userwallet/userwallet": { "navigationBarTitleText": "返现", "usingComponents": {} }, "pages/distribution/distribution": { "navigationBarTitleText": "物流信息", "usingComponents": { "track-node": "/components/trackNode" } } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 

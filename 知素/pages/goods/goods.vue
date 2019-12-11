@@ -213,8 +213,16 @@
 						</text>
 					</view>
 				</view>
+				<view class="attr-list">
+					<text>数量</text>
+					<view class="item-list">
+						<view class="rest">-</view>
+						<view class="number">{{pronumber}}</view>
+						<view class="add">+</view>
+					</view>
+				</view>
 				
-				<button class="btn" @click="toggleSpec">完成</button>
+				<button class="btn" @click="buy('/pages/payorder/payorder')">完成</button>
 			</view>
 		</view>
 		
@@ -222,6 +230,7 @@
 		<view class="footer">
 			<view class="icons">
 				<view class="box" @tap="share">
+					<button open-type="share" class="button-share" @click=""onShareAppMessage></button>
 					<view class="icon fenxiang"></view>
 					<view class="text">分享</view>
 				</view>
@@ -235,8 +244,8 @@
 				</view> -->
 			</view>
 			<view class="btn">
-				<view class="joinCart" @tap="joinCart">加入购物车</view>
-				<view class="buy" @click="buy('/pages/payorder/payorder')">立即购买</view>
+				<!-- <view class="joinCart" @tap="joinCart">加入购物车</view> -->
+				<view class="buy" @click="toggleSpec">立即购买</view>
 			</view>
 		</view>
 	</view>
@@ -260,7 +269,8 @@
 				showFullscreenBtn:true,
 				// require('../../static/happy.mp4')
 				// https://mp4.vjshi.com/2017-06-17/ed1d63669bea39f5ef078c4e194291d6.mp4
-				videoSrc:'https://mp4.vjshi.com/2017-06-17/ed1d63669bea39f5ef078c4e194291d6.mp4'
+				videoSrc:'https://mp4.vjshi.com/2017-06-17/ed1d63669bea39f5ef078c4e194291d6.mp4',
+				pronumber:1
 			}
 		},
 		onReady: function (res) {
@@ -369,6 +379,21 @@
 				// this.isPlayVideo = false;
 				// this.videoSrc = '';
 			}, 
+			
+			
+			//分享商品
+			onShareAppMessage(res){
+				console.log(res)
+				if (res.from === 'button') {
+				  // 来自页面内转发按钮
+				  console.log(res.target)
+				}
+				return {
+				  title: '自定义转发标题',
+				  path: '/pages/goods/goods?id=123',
+				  imageUrl:'../../static/img/face.jpg'
+				}
+			}
 		}
 	}
 </script>
@@ -751,6 +776,21 @@
 					background: #fbebee;
 					color: $uni-color-primary;
 				}
+				.rest,.add{
+					padding: 0 20upx;
+					height: 60upx;
+					color: $font-color-dark;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: #eee;
+				}
+				.number{
+					width: 100rpx;
+					height: 60upx;
+					text-align: center;
+					line-height: 60upx;
+				}
 			}
 		}
 		
@@ -867,6 +907,18 @@
 					display: flex;
 					justify-content: center;
 					flex-wrap: wrap;
+					position: relative;
+					.button-share{
+						width: 100%;
+						height: 100%;
+						display: block;
+						margin: 0;
+						padding: 0;
+						position: absolute;
+						left: 0;
+						top: 0;
+						opacity: 0;
+					}
 					.icon {
 						font-size: 40upx;
 						color: #828282;
@@ -889,7 +941,7 @@
 				.joinCart,
 				.buy {
 					height: 80upx;
-					padding: 0 40upx;
+					padding: 0 60upx;
 					color: #fff;
 					display: flex;
 					align-items: center;

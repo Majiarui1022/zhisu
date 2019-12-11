@@ -264,6 +264,8 @@ var _default =
         _that.windowHeight = res.windowHeight;
       } });
 
+
+
   },
 
   onReachBottom: function onReachBottom() {

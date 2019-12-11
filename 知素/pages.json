@@ -77,6 +77,13 @@
 			}
 		},
 		{
+			
+			"path": "pages/distribution/distribution",
+			"style": {
+				"navigationBarTitleText": "物流信息"
+			}
+		},
+		{
 			"path": "pages/userwallet/userwallet",
 			"style": {
 				"navigationBarTitleText": "返现"
@@ -96,8 +103,8 @@
 	
 	
 	"tabBar": {
-	    "color": "#7A7E83",
-	    "selectedColor": "#3cc51f",
+	    "color": "#5F3E28",
+	    "selectedColor": "#5F3E28",
 	    "borderStyle": "black",
 	    "backgroundColor": "#ffffff",
 	    "list": 
@@ -105,15 +112,23 @@
 			
 			{
 				"pagePath":"pages/index/index",
-				"text": "首页"
+				"text": "首页",
+				"iconPath":"static/homeicn.png",
+				"selectedIconPath":"static/homeicned.png"
+				
 			}, 
 			{
 				"pagePath":"pages/shopping/shopping",
-				"text": "商城"
+				"text": "商城",
+				"iconPath":"static/shopping.png",
+				"selectedIconPath":"static/shoppinged.png"
+				
 			},
 			{
 				"pagePath":"pages/home/home",
-				"text": "我的"
+				"text": "我的",
+				"iconPath":"static/usericn.png",
+				"selectedIconPath":"static/usericned.png"
 			}
 		]
 	}

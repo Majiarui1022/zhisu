@@ -15,14 +15,18 @@
 			<view class="pay-price">￥2563</view>
 			<view class="money">
 				<view class="income pire">
-					<view class="income-icn"></view>
+					<view class="income-icn">
+						<image src="../../static/add.png" mode=""></image>
+					</view>
 					<view class="income-info">
 						<text class="inc-tit">收入</text>
 						<text class="inc-price">￥6004</text>
 					</view>
 				</view>
 				<view class="expenditure pire">
-					<view class="income-icn"></view>
+					<view class="income-icn">
+						<image src="../../static/rest.png" mode=""></image>
+					</view>
 					<view class="income-info">
 						<text class="inc-tit">收入</text>
 						<text class="inc-price">￥6004</text>
@@ -472,8 +476,12 @@
 				.income-icn{
 					width:48rpx;
 					height:48rpx;
-					background:rgba(149,193,250,1);
 					border-radius:50%;
+					image{
+						width: 100%;
+						height: 100%;
+						display: block;
+					}
 				}
 				.income-info{
 					margin-left: 20rpx;
